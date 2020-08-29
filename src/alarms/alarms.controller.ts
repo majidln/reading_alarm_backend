@@ -1,4 +1,3 @@
-import { AlarmSchema } from './alarms.model';
 import { Controller, Body, Post, Get } from '@nestjs/common';
 import { AlarmsService } from './alarms.service';
 
@@ -18,8 +17,4 @@ export class AlarmsController {
         const generatedId = await this.alarmsService.insert(title, desc);
         return {id: generatedId}
     }
-    // @Post('register')
-    // async create(@Body() createCatDto: CreateUserDto) {
-    //     this.userService.create(createCatDto);
-    // }
 }
