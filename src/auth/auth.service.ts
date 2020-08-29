@@ -15,8 +15,7 @@ export class AuthService {
     
     if (user && user.password === pass) {
       const { password, ...result } = user;
-      console.log('validateUser', result.username, user._id)
-      return {username: result.username, _id: user._id};
+      return {username: result.username, _id: user.id};
     }
     return null;
   }
