@@ -7,6 +7,7 @@ import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { AlarmsModule } from './alarms/alarms.module';
+import { ProfileModule } from './profile/profile.module';
 
 @Module({
   imports: [
@@ -14,7 +15,8 @@ import { AlarmsModule } from './alarms/alarms.module';
     MongooseModule.forRoot(process.env.MONGO_CONNECT),
     AuthModule,
     UsersModule,
-    AlarmsModule
+    AlarmsModule,
+    ProfileModule
   ],
   controllers: [AppController, UsersController],
   providers: [AppService],
